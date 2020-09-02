@@ -275,6 +275,13 @@ extern int chown(const char *path, uid_t owner, gid_t group);
 static inline void sync(void) {
 }
 
+static inline ssize_t pread(int fd, void *buf, size_t count, off_t offset) {
+	return -1;
+}
+
+static inline ssize_t pwrite(int fd, const void *buf, size_t count, off_t offset) {
+	return -1;
+}
 
 extern unsigned alarm(unsigned seconds);
 
