@@ -54,9 +54,14 @@ struct linger {
 	int         l_linger;         /* linger time, in seconds */
 };
 
+#define SCM_RIGHTS   0
+
 #define CMSG_DATA(cmsg) NULL
 #define CMSG_NXTHDR(mhdr,cmsg) NULL
 #define CMSG_FIRSTHDR(mhdr) NULL
+/* FIXME Is it really POSIX? */
+#define CMSG_SPACE(mhdr) 0
+#define CMSG_LEN(mhdr) 0
 
 /**
  * Supported protocol/address families
