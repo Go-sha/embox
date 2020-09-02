@@ -54,6 +54,9 @@ struct linger {
 	int         l_linger;         /* linger time, in seconds */
 };
 
+#define CMSG_DATA(cmsg) NULL
+#define CMSG_NXTHDR(mhdr,cmsg) NULL
+#define CMSG_FIRSTHDR(mhdr) NULL
 
 /**
  * Supported protocol/address families
